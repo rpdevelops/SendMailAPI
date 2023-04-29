@@ -4,16 +4,16 @@ This is a simple API using NodeJS to receive requests via HTTP POST with just th
 To use this API you just need:
 - Create a file called ".env" in the main directory of API-Email and adjust the ".env" file with information of your Mail Server just like here:
 
-MAIL_SMTP_SERVER= YOUR SMTP MAIL SERVER
-MAIL_SMTP_PORT= 465
-SEND_USER= MAILUSER@YOURDOMAIN.COM
-SEND_PASSWORD= YOURMAILPASSWORD
-FROM_MAIL= YOURMAILUSER@YOURDMAIN.COM
+MAIL_SMTP_SERVER= YOUR SMTP MAIL SERVER \n
+MAIL_SMTP_PORT= 465 \n
+SEND_USER= MAILUSER@YOURDOMAIN.COM \n
+SEND_PASSWORD= YOURMAILPASSWORD \n
+FROM_MAIL= YOURMAILUSER@YOURDMAIN.COM \n
 
 - Run the MailApi.mjs and do Post Requests to test it in this address: http://yourhostname:4001/mailapi/send-email with the following JSON body:
 
-{
-    "subject": "SUBJECT OF EMAIL",
-    "toEmail": "destinatary@domain.com",
-    "body": "EMAIL SENT BY MAIL-API"
+{ \n
+    "subject": "SUBJECT OF EMAIL", \n
+    "toEmail": "destinatary@domain.com", \n
+    "body": "EMAIL SENT BY MAIL-API" \n
 }
