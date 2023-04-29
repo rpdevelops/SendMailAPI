@@ -12,7 +12,7 @@ FROM_MAIL= YOURMAILUSER@YOURDMAIN.COM <br>
 
 - Run the MailApi.mjs and do Post Requests to test it in this address: http://yourhostname:4001/mailapi/send-email with the following JSON body:
 
-{ \n
+{ <br>
     "subject": "SUBJECT OF EMAIL", <br>
     "toEmail": "destinatary@domain.com", <br>
     "body": "EMAIL SENT BY MAIL-API" <br>
