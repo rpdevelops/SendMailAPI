@@ -16,21 +16,15 @@ const transporter = createTransport({
     pass: process.env.SEND_PASSWORD, // email password
   },
 });
-
 // Send email Function
-export default function send_mail(to,subject,text) {
+export default async function send_mail(to,subject,text) {
   const mail = {
     from: process.env.FROM_MAIL,
     to: to,
     subject: subject,
     text: text,
   }
-  transporter.sendMail(mail, (error, info) => {
-    if (error) {
-      console.log('Error occurred:', error.message);
-      return process.exit(1);
-    }
-    console.log('Email sent:', info.response);
-    transporter.close();
-  });
+let response =  await transporter.sendMail(mail);
+return response['response'];
+
 }

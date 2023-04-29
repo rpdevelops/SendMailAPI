@@ -16,12 +16,8 @@ api.post('/mailapi/send-email', (req, res) => {
   const toEmail = req.body.toEmail;
   const body = req.body.body;
 //SEND EMAIL WITH THE VARIABLES SENT IN REQUEST.
-try {
-    send_mail(toEmail,subject ,body);
-    res.send('Email sent successfully');
-} catch (error) {
-    res.send(error);
-}
+let returned = send_mail(toEmail,subject ,body)
+returned.then((message)=>res.send("Status do Envio do Email: "+message))
 });
 
 // SERVER START
